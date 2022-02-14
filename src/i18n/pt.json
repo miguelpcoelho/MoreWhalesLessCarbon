@@ -1,0 +1,13 @@
+{
+  "cover": {
+    "headerTitle": "Os oceanos",
+    "subtitle": "Clique nos círculos para descobrir!",
+    "firstButton": "Problema",
+    "secondButton": "Solução",
+    "footerTitle": "fazem o quê?"
+  },
+  "problem": {
+    "title": "O Problema",
+    "button": "solução"
+  }
+}

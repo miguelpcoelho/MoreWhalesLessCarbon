@@ -1,4 +1,10 @@
-import { Text, TouchableOpacity, View, Image } from "react-native";
+import {
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  ImageBackground,
+} from "react-native";
 import styled from "styled-components";
 
 export const Container = styled(View)`
@@ -7,6 +13,12 @@ export const Container = styled(View)`
   padding-top: 80px;
   padding-bottom: 100px;
   align-items: center;
+`;
+
+export const Background = styled(ImageBackground)`
+  align-items: center;
+  width: 100%;
+  flex: 1;
 `;
 
 export const Title = styled(Text)`

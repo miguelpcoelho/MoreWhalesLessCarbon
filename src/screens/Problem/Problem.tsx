@@ -1,8 +1,10 @@
 import { useNavigation } from "@react-navigation/native";
+import { t } from "i18next";
 import React from "react";
-import { SafeAreaView } from "react-native";
 import greenhouseEffect from "../../../assets/images/greenhouse-effect.png";
+import problemBackground from "../../../assets/images/problem_background.png";
 import ContentBlock from "../../components/ContentBlock/ContentBlock";
+import Header from "../../components/Header/Header";
 import { ContentBlockProps } from "../../interfaces";
 import * as Styled from "./Problem.styles";
 
@@ -26,9 +28,10 @@ const Problem = () => {
   const navigation = useNavigation<any>();
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Styled.Container>
-        <Styled.Title>the problem of CO2</Styled.Title>
+    <Styled.Container>
+      <Styled.Background source={problemBackground} resizeMode="stretch">
+        <Header />
+        <Styled.Title>{t("problem.title")}</Styled.Title>
         <Styled.ContentBlockContainer>
           {contentBlocks.map((content) => (
             <ContentBlock
@@ -39,13 +42,13 @@ const Problem = () => {
             />
           ))}
         </Styled.ContentBlockContainer>
-        <Styled.Button>
+        <Styled.Button activeOpacity={0.7}>
           <Styled.ButtonText onPress={() => navigation.navigate("Solution")}>
-            Solution
+            {t("problem.button")}
           </Styled.ButtonText>
         </Styled.Button>
-      </Styled.Container>
-    </SafeAreaView>
+      </Styled.Background>
+    </Styled.Container>
   );
 };
 

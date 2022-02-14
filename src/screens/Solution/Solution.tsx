@@ -4,7 +4,9 @@ import { ImageSourcePropType, SafeAreaView } from "react-native";
 import whale1 from "../../../assets/images/whale1.png";
 import whale2 from "../../../assets/images/whale2.png";
 import whale3 from "../../../assets/images/whale3.png";
+import solutionBackground from "../../../assets/images/solution_background.png";
 import * as Styled from "./Solution.styles";
+import Header from "../../components/Header/Header";
 
 interface TitleImages {
   name: string;
@@ -33,15 +35,16 @@ const Solution = () => {
   const navigation = useNavigation<any>();
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Styled.Container>
+    <Styled.Container>
+      <Styled.Background source={solutionBackground} resizeMode="stretch">
+        <Header />
         <Styled.Title>Whales</Styled.Title>
         <Styled.Subtitle>a CO2 sequestring machine</Styled.Subtitle>
         <Styled.SolutionsContainer>
           {solutions.map((solution) => {
             if (solution.title) {
               return (
-                <Styled.Solution key={solution.title}>
+                <Styled.Solution key={solution.title} activeOpacity={0.7}>
                   <Styled.SolutionText>{solution.title}</Styled.SolutionText>
                 </Styled.Solution>
               );
@@ -53,6 +56,7 @@ const Solution = () => {
                       <Styled.Whale
                         key={whale.name}
                         onPress={() => navigation.navigate("WhaleAnimation")}
+                        activeOpacity={0.5}
                       >
                         <Styled.WhaleText>{whale.name}</Styled.WhaleText>
                         <Styled.ImageContainer source={whale.image} />
@@ -64,8 +68,8 @@ const Solution = () => {
             }
           })}
         </Styled.SolutionsContainer>
-      </Styled.Container>
-    </SafeAreaView>
+      </Styled.Background>
+    </Styled.Container>
   );
 };
 

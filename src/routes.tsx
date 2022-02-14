@@ -5,6 +5,7 @@ import Cover from "./screens/Cover/Cover";
 import Problem from "./screens/Problem/Problem";
 import Solution from "./screens/Solution/Solution";
 import WhaleAnimation from "./screens/WhaleAnimation/WhaleAnimation";
+import "../src/i18n/index";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
