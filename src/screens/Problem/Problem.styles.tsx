@@ -14,16 +14,6 @@ export const Background = styled(ImageBackground)`
   flex: 1;
 `;
 
-export const Title = styled(Text)`
-  font-family: ${fonts.text};
-  color: ${colors.main};
-  font-size: 50px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  text-align: center;
-  margin-bottom: 20px;
-`;
-
 export const ContentBlockContainer = styled(View)`
   flex: 1;
   width: 100%;
@@ -49,7 +39,6 @@ export const ButtonText = styled(Text)`
   font-family: ${fonts.title};
   color: ${colors.main};
   font-size: 10px;
-  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 `;

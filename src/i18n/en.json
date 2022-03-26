@@ -8,6 +8,24 @@
   },
   "problem": {
     "title": "The Problem",
+    "subtitle": "Carbon Dioxide (CO2) in the atmosphere",
     "button": "solution"
-  }
+  },
+  "solution": {
+    "title": "A solution",
+    "subtitle": "The Oceans!\nCarbon sequestration machines",
+    "firstCard": "Ocean Carbon Cycle",
+    "lastCard": "What can I do to help?",
+    "cicleTitle": "Cycle in operation"
+  },
+  "whaleAnimation": {
+    "progressBar1Title": "CO2 absorbed by {{name}}",
+    "progressBar2Title": "CO2 absorbed by 30 trees",
+    "progressBar3Title": "CO2 produced by a person",
+    "chartsTitle": "At the end of his {{lifeTime}} years of life, {{name}}",
+    "months": "Meses"
+  },
+  "blueWhale": "Blue Whale",
+  "pilotWhale": "Pilot Whale",
+  "humpbackWhale": "Humpback Whale"
 }

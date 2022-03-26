@@ -8,6 +8,24 @@
   },
   "problem": {
     "title": "O Problema",
+    "subtitle": "Dióxido de Carbono (CO2) na atmosfera",
     "button": "solução"
-  }
+  },
+  "solution": {
+    "title": "Uma Solução",
+    "subtitle": "Os Oceanos!\nMáquinas de sequestro de carbono",
+    "firstCard": "Ciclo de Carbono dos Oceanos",
+    "lastCard": "O que posso fazer para ajudar?",
+    "cicleTitle": "Ciclo em funcionamento"
+  },
+  "whaleAnimation": {
+    "progressBar1Title": "CO2 absorvido pela {{name}}",
+    "progressBar2Title": "CO2 absorvido por 30 árvores",
+    "progressBar3Title": "CO2 produzido por uma pessoa",
+    "chartsTitle": "No final dos seus {{lifeTime}} anos de vida, a {{name}}...",
+    "months": "Months"
+  },
+  "blueWhale": "Baleia azul",
+  "pilotWhale": "Baleia piloto",
+  "humpbackWhale": "Baleia jubarte"
 }

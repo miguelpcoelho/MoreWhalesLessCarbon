@@ -5,6 +5,7 @@ import greenhouseEffect from "../../../assets/images/greenhouse-effect.png";
 import problemBackground from "../../../assets/images/problem_background.png";
 import ContentBlock from "../../components/ContentBlock/ContentBlock";
 import Header from "../../components/Header/Header";
+import TopContent from "../../components/TopContent/TopContent";
 import { ContentBlockProps } from "../../interfaces";
 import * as Styled from "./Problem.styles";
 
@@ -31,7 +32,10 @@ const Problem = () => {
     <Styled.Container>
       <Styled.Background source={problemBackground} resizeMode="stretch">
         <Header />
-        <Styled.Title>{t("problem.title")}</Styled.Title>
+        <TopContent
+          title={t("problem.title")}
+          subtitle={t("problem.subtitle")}
+        />
         <Styled.ContentBlockContainer>
           {contentBlocks.map((content) => (
             <ContentBlock

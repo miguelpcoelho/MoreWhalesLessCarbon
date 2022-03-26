@@ -6,12 +6,12 @@ import {
   ImageBackground,
 } from "react-native";
 import styled from "styled-components";
+import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 
 export const Container = styled(View)`
   flex: 1;
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 100px;
   align-items: center;
 `;
 
@@ -21,56 +21,52 @@ export const Background = styled(ImageBackground)`
   flex: 1;
 `;
 
-export const Title = styled(Text)`
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-`;
-
-export const Subtitle = styled(Text)`
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 80px;
-`;
-
-export const SolutionsContainer = styled(View)`
-  flex: 1;
-  width: 100%;
+export const BodyContainer = styled(View)`
   align-items: center;
+  flex: 1;
   justify-content: space-between;
+  padding-top: 80px;
+  padding-bottom: 150px;
 `;
+
+export const SolutionsContainer = styled(View)``;
 
 export const Solution = styled(TouchableOpacity)`
-  width: 300px;
-  height: 80px;
-  border: 1px solid;
+  height: 100px;
+  border: 2px solid ${colors.main};
   border-radius: 20px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding-left: 20px;
 `;
 
 export const SolutionText = styled(Text)`
   font-size: 20px;
   letter-spacing: -1px;
-  text-transform: uppercase;
+  text-align: center;
+  font-family: ${fonts.text};
+  color: ${colors.main};
+`;
+
+export const CicleText = styled(Text)`
+  margin-bottom: 10px;
+  font-size: 20px;
+  letter-spacing: -1px;
+  text-align: center;
+  font-family: ${fonts.text};
+  color: ${colors.main};
 `;
 
 export const WhaleText = styled(Text)`
   font-size: 15px;
   letter-spacing: -1px;
-  text-transform: uppercase;
+  font-family: ${fonts.text};
+  color: ${colors.main};
 `;
 
 export const Whale = styled(TouchableOpacity)`
   width: 80px;
   height: 100px;
-  border: 1px solid;
+  border: 2px solid ${colors.main};
   border-radius: 6px;
   align-items: center;
   justify-content: center;
@@ -78,8 +74,8 @@ export const Whale = styled(TouchableOpacity)`
 
 export const WhalesContainer = styled(View)`
   flex-direction: row;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 70px;
+  padding-right: 70px;
   justify-content: space-between;
   width: 100%;
 `;

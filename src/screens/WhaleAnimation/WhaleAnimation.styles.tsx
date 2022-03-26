@@ -1,42 +1,131 @@
-import { Text, View } from "react-native";
+import {
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  Animated,
+} from "react-native";
 import styled from "styled-components";
+import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 
 export const Container = styled(View)`
   flex: 1;
   width: 100%;
-  padding-top: 60px;
   align-items: center;
 `;
 
-export const TitleContainer = styled(View)`
-  width: 200px;
-`;
-
-export const Title = styled(Text)`
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+export const Background = styled(ImageBackground)`
+  align-items: center;
+  width: 100%;
+  flex: 1;
 `;
 
 export const AnimationContainer = styled(View)`
   position: relative;
   width: 100%;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding-left: 20px;
 `;
 
 export const GlobeContainer = styled(View)`
   position: absolute;
   bottom: -50px;
-  left: 32px;
+  left: 15px;
 `;
 
-export const StatsContainer = styled(View)`
-  flex: 1;
+export const ProgressBarContainer = styled(View)`
   width: 100%;
-  padding-left: 20px;
+  padding-left: 40px;
   align-items: flex-end;
+`;
+
+export const MonthsContainer = styled(View)`
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.pink};
+  position: absolute;
+  bottom: 25px;
+  left: 310px;
+  padding-bottom: 5px;
+`;
+
+export const Months = styled(Animated.Text)`
+  font-family: ${fonts.title};
+  color: ${colors.main};
+  font-size: 20px;
+  text-align: center;
+`;
+
+export const MonthsText = styled(Text)`
+  font-family: ${fonts.text};
+  color: ${colors.main};
+  font-size: 13px;
+  text-align: center;
+  margin-top: -10px;
+`;
+
+export const LifeChartContainer = styled(View)`
+  margin-top: 10px;
+  flex-direction: row;
+`;
+
+export const LifeStatsContainer = styled(View)`
+  margin-top: 30px;
+  width: 100%;
+  align-items: center;
+`;
+
+export const ChartsTitle = styled(Text)`
+  font-family: ${fonts.title};
+  color: ${colors.main};
+  font-size: 13px;
+`;
+
+export const LifeChart = styled(View)`
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background-color: ${colors.white};
+  margin-left: 10px;
+  margin-right: 10px;
+`;
+
+export const ToHelpButton = styled(TouchableOpacity)`
+  margin-top: 35px;
+  width: 210px;
+  height: 50px;
+  border: 2px solid ${colors.main};
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ToHelpButtonText = styled(Text)`
+  font-size: 12px;
+  font-family: ${fonts.title};
+  color: ${colors.main};
+`;
+
+export const ImageContainer = styled(View)`
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.white};
+  position: absolute;
+  bottom: 270px;
+  left: 285px;
+`;
+
+export const WhaleImage = styled(Image)`
+  width: 70px;
+  height: 50px;
 `;
