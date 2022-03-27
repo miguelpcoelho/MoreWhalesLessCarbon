@@ -20,7 +20,7 @@
   },
   "whaleAnimation": {
     "progressBar1Title": "CO2 absorvido pela {{name}}",
-    "progressBar2Title": "CO2 absorvido por 30 árvores",
+    "progressBar2Title": "CO2 absorvido por 50 árvores",
     "progressBar3Title": "CO2 produzido por uma pessoa",
     "chartsTitle": "No final dos seus {{lifeTime}} anos de vida, a {{name}}...",
     "months": "Meses"

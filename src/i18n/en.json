@@ -20,7 +20,7 @@
   },
   "whaleAnimation": {
     "progressBar1Title": "CO2 absorbed by {{name}}",
-    "progressBar2Title": "CO2 absorbed by 30 trees",
+    "progressBar2Title": "CO2 absorbed by 50 trees",
     "progressBar3Title": "CO2 produced by a person",
     "chartsTitle": "At the end of his {{lifeTime}} years of life, {{name}}",
     "months": "Months"

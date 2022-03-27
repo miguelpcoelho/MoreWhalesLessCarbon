@@ -1,5 +1,5 @@
 import { AVPlaybackSource } from "expo-av/build/AV";
-import { ImageSourcePropType } from "react-native";
+import { ColorValue, ImageSourcePropType } from "react-native";
 
 export interface ContentBlockProps {
   id: number;
@@ -13,4 +13,11 @@ export interface WhaleProps {
   species: string;
   lifeTime: number;
   video: AVPlaybackSource;
+}
+
+export interface ProgressBarProps {
+  title: string;
+  color: ColorValue;
+  progressBarValue: number;
+  total: number;
 }

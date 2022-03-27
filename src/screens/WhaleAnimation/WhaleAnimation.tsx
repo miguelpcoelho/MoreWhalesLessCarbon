@@ -1,13 +1,7 @@
 import { Video } from "expo-av";
 import AnimatedLottieView from "lottie-react-native";
 import React, { useEffect, useRef, useState } from "react";
-import {
-  Animated,
-  ColorValue,
-  Dimensions,
-  SafeAreaView,
-  View,
-} from "react-native";
+import { ColorValue, Dimensions } from "react-native";
 import globe from "../../../assets/lottie/globe-world-animation.json";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import solutionBackground from "../../../assets/images/solution_background.png";
@@ -16,14 +10,8 @@ import Header from "../../components/Header/Header";
 import { useRoute } from "@react-navigation/native";
 import TopContent from "../../components/TopContent/TopContent";
 import { t } from "i18next";
-import { WhaleProps } from "../../interfaces";
+import { ProgressBarProps, WhaleProps } from "../../interfaces";
 import colors from "../../styles/colors";
-
-interface ProgressBarStatsProps {
-  title: string;
-  color: ColorValue;
-  progressBarValue: number;
-}
 
 const windowWidth = Dimensions.get("window").width;
 
@@ -32,18 +20,18 @@ const WhaleAnimation = () => {
   const animationRef = useRef<AnimatedLottieView>(null);
   const route = useRoute();
 
-  const monthAnim = useRef(new Animated.Value(0)).current;
-
-  const increaseMonths = () => {
-    Animated.timing(monthAnim, {
-      toValue: 10,
-      duration: 1000,
-      useNativeDriver: false,
-    }).start();
-  };
+  const [months, setMonths] = useState(0);
 
   useEffect(() => {
-    increaseMonths();
+    const timer = setInterval(() => {
+      setMonths((prevMonth) => {
+        if (prevMonth === 12) {
+          clearInterval(timer);
+          return 12;
+        }
+        return prevMonth + 1;
+      });
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -52,21 +40,24 @@ const WhaleAnimation = () => {
 
   const { name, species, lifeTime, image, video } = route.params as WhaleProps;
 
-  const progressBarStats: ProgressBarStatsProps[] = [
+  const progressBarStats: ProgressBarProps[] = [
     {
       title: t("whaleAnimation.progressBar1Title", { name }),
       color: colors.blue,
       progressBarValue: windowWidth / 1.87,
+      total: 33,
     },
     {
       title: t("whaleAnimation.progressBar2Title"),
       color: colors.green,
-      progressBarValue: windowWidth / 2.5,
+      progressBarValue: windowWidth / 56.1,
+      total: 1,
     },
     {
       title: t("whaleAnimation.progressBar3Title"),
       color: colors.orange,
-      progressBarValue: windowWidth / 2.2,
+      progressBarValue: windowWidth / 9.07,
+      total: 7,
     },
   ];
 
@@ -93,7 +84,7 @@ const WhaleAnimation = () => {
               <Styled.WhaleImage source={image} />
             </Styled.ImageContainer>
             <Styled.MonthsContainer>
-              <Styled.Months>{monthAnim}</Styled.Months>
+              <Styled.Months>{months}</Styled.Months>
               <Styled.MonthsText>
                 {t("whaleAnimation.months")}
               </Styled.MonthsText>
@@ -110,8 +101,9 @@ const WhaleAnimation = () => {
         <Styled.ProgressBarContainer>
           {progressBarStats.map((stat) => (
             <ProgressBar
-              name={stat.title}
+              title={stat.title}
               color={stat.color}
+              total={stat.total}
               key={stat.title}
               progressBarValue={stat.progressBarValue}
             />

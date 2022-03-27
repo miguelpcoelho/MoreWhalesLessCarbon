@@ -25,6 +25,11 @@ export const Name = styled(Text)`
 export const ProgressBar = styled(Animated.View)`
   border-radius: 3px;
   height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+  flex-direction: row;
+  overflow: visible;
 `;
 
 export const ProgressBarContainer = styled(View)`
@@ -32,4 +37,11 @@ export const ProgressBarContainer = styled(View)`
   padding: 1px;
   height: 18px;
   background-color: ${colors.main};
+`;
+
+export const ProgressBarValue = styled(Text)`
+  font-size: 13px;
+  font-weight: bold;
+  font-family: ${fonts.text};
+  color: ${colors.white};
 `;
