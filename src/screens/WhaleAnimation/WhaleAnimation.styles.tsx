@@ -26,7 +26,7 @@ export const AnimationContainer = styled(View)`
   position: relative;
   width: 100%;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: 20px;
   padding-left: 20px;
 `;
@@ -39,8 +39,7 @@ export const GlobeContainer = styled(View)`
 
 export const ProgressBarContainer = styled(View)`
   width: 100%;
-  padding-left: 40px;
-  align-items: flex-end;
+  align-items: center;
 `;
 
 export const MonthsContainer = styled(View)`
@@ -71,6 +70,12 @@ export const MonthsText = styled(Text)`
   margin-top: -10px;
 `;
 
+export const OceanCycleContainer = styled(View)`
+  width: 100%;
+  height: 200px;
+  border: 1px solid red;
+`;
+
 export const LifeChartContainer = styled(View)`
   margin-top: 10px;
   flex-direction: row;
@@ -97,14 +102,19 @@ export const LifeChart = styled(View)`
   margin-right: 10px;
 `;
 
+export const ToHelpButtonContainer = styled(View)`
+  flex: 1;
+  justify-content: flex-end;
+`;
+
 export const ToHelpButton = styled(TouchableOpacity)`
-  margin-top: 35px;
   width: 210px;
   height: 50px;
   border: 2px solid ${colors.main};
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 `;
 
 export const ToHelpButtonText = styled(Text)`

@@ -35,6 +35,10 @@ const Solution = () => {
           species: t("humpbackWhale"),
           lifeTime: 80,
           video: animation1,
+          //colocar video novo aqui
+          videoDuration: 15000,
+          //colocar duracao do video novo aqui
+          pathTime: 12,
         },
         {
           name: "Dory",
@@ -42,6 +46,8 @@ const Solution = () => {
           species: t("blueWhale"),
           lifeTime: 60,
           video: animation2,
+          videoDuration: 45000,
+          pathTime: 2,
         },
         {
           name: "Suzy",
@@ -49,6 +55,8 @@ const Solution = () => {
           species: t("pilotWhale"),
           lifeTime: 70,
           video: animation1,
+          videoDuration: 15000,
+          pathTime: 1,
         },
       ],
     },
@@ -90,6 +98,8 @@ const Solution = () => {
                               lifeTime: whale.lifeTime,
                               image: whale.image,
                               video: whale.video,
+                              videoDuration: whale.videoDuration,
+                              pathTime: whale.pathTime,
                             })
                           }
                           activeOpacity={0.5}

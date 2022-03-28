@@ -8,6 +8,7 @@ const ProgressBar = ({
   color,
   progressBarValue,
   total,
+  videoDuration,
 }: ProgressBarProps) => {
   const progressAnim = useRef(new Animated.Value(0)).current;
   const [carbonTons, setCarbonTons] = useState(0);
@@ -15,7 +16,7 @@ const ProgressBar = ({
   const increaseSize = () => {
     Animated.timing(progressAnim, {
       toValue: progressBarValue,
-      duration: 15000,
+      duration: videoDuration,
       useNativeDriver: false,
     }).start();
   };
@@ -29,7 +30,7 @@ const ProgressBar = ({
         }
         return prevValue + 1;
       });
-    }, 480);
+    }, videoDuration / total);
   }, []);
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const ProgressBar = ({
       <Styled.NameContainer>
         <Styled.Name>{title}</Styled.Name>
       </Styled.NameContainer>
-      <Styled.ProgressBarContainer style={{ width: "60%" }}>
+      <Styled.ProgressBarContainer>
         <Styled.ProgressBar
           style={{
             width: progressAnim,

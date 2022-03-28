@@ -13,6 +13,8 @@ export interface WhaleProps {
   species: string;
   lifeTime: number;
   video: AVPlaybackSource;
+  videoDuration: number;
+  pathTime: number;
 }
 
 export interface ProgressBarProps {
@@ -20,4 +22,11 @@ export interface ProgressBarProps {
   color: ColorValue;
   progressBarValue: number;
   total: number;
+  videoDuration: number;
+}
+
+export interface OceanCycleProps {
+  slideNumber: number;
+  title: string;
+  text: string;
 }

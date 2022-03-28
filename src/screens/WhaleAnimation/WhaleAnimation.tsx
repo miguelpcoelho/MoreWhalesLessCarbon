@@ -1,17 +1,22 @@
+import { useRoute } from "@react-navigation/native";
 import { Video } from "expo-av";
+import { t } from "i18next";
 import AnimatedLottieView from "lottie-react-native";
 import React, { useEffect, useRef, useState } from "react";
-import { ColorValue, Dimensions } from "react-native";
-import globe from "../../../assets/lottie/globe-world-animation.json";
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import { Dimensions, SafeAreaView, ScrollView } from "react-native";
 import solutionBackground from "../../../assets/images/solution_background.png";
-import * as Styled from "./WhaleAnimation.styles";
+import globe from "../../../assets/lottie/globe-world-animation.json";
 import Header from "../../components/Header/Header";
-import { useRoute } from "@react-navigation/native";
+import HorizontalList from "../../components/HorizontalList/HorizontalList";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import TopContent from "../../components/TopContent/TopContent";
-import { t } from "i18next";
-import { ProgressBarProps, WhaleProps } from "../../interfaces";
+import {
+  OceanCycleProps,
+  ProgressBarProps,
+  WhaleProps,
+} from "../../interfaces";
 import colors from "../../styles/colors";
+import * as Styled from "./WhaleAnimation.styles";
 
 const windowWidth = Dimensions.get("window").width;
 
@@ -23,41 +28,68 @@ const WhaleAnimation = () => {
   const [months, setMonths] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setMonths((prevMonth) => {
-        if (prevMonth === 12) {
-          clearInterval(timer);
-          return 12;
-        }
-        return prevMonth + 1;
-      });
-    }, 1000);
-  }, []);
-
-  useEffect(() => {
     animationRef?.current?.play(0, 140);
   }, []);
 
-  const { name, species, lifeTime, image, video } = route.params as WhaleProps;
+  const { name, species, lifeTime, image, video, videoDuration, pathTime } =
+    route.params as WhaleProps;
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setMonths((prevMonth) => {
+        if (prevMonth === pathTime) {
+          clearInterval(timer);
+          return pathTime;
+        }
+        return prevMonth + 1;
+      });
+    }, videoDuration / (pathTime + 1));
+  }, []);
 
   const progressBarStats: ProgressBarProps[] = [
     {
       title: t("whaleAnimation.progressBar1Title", { name }),
       color: colors.blue,
-      progressBarValue: windowWidth / 1.87,
+      progressBarValue: windowWidth / 1.26,
       total: 33,
+      videoDuration,
     },
     {
       title: t("whaleAnimation.progressBar2Title"),
       color: colors.green,
-      progressBarValue: windowWidth / 56.1,
+      progressBarValue: windowWidth / 37.8,
       total: 1,
+      videoDuration,
     },
     {
       title: t("whaleAnimation.progressBar3Title"),
       color: colors.orange,
-      progressBarValue: windowWidth / 9.07,
+      progressBarValue: windowWidth / 6.11,
       total: 7,
+      videoDuration,
+    },
+  ];
+
+  const oceanCycle: OceanCycleProps[] = [
+    {
+      title: t("whaleAnimation.oceanCycle.title.1"),
+      text: t("whaleAnimation.oceanCycle.text.1"),
+      slideNumber: 1,
+    },
+    {
+      title: t("whaleAnimation.oceanCycle.title.2"),
+      text: t("whaleAnimation.oceanCycle.text.2"),
+      slideNumber: 2,
+    },
+    {
+      title: t("whaleAnimation.oceanCycle.title.3"),
+      text: t("whaleAnimation.oceanCycle.text.3"),
+      slideNumber: 3,
+    },
+    {
+      title: t("whaleAnimation.oceanCycle.title.4"),
+      text: t("whaleAnimation.oceanCycle.text.4"),
+      slideNumber: 4,
     },
   ];
 
@@ -85,9 +117,15 @@ const WhaleAnimation = () => {
             </Styled.ImageContainer>
             <Styled.MonthsContainer>
               <Styled.Months>{months}</Styled.Months>
-              <Styled.MonthsText>
-                {t("whaleAnimation.months")}
-              </Styled.MonthsText>
+              {months !== 1 ? (
+                <Styled.MonthsText>
+                  {t("whaleAnimation.months")}
+                </Styled.MonthsText>
+              ) : (
+                <Styled.MonthsText>
+                  {t("whaleAnimation.month")}
+                </Styled.MonthsText>
+              )}
             </Styled.MonthsContainer>
             <AnimatedLottieView
               ref={animationRef}
@@ -98,32 +136,40 @@ const WhaleAnimation = () => {
             />
           </Styled.GlobeContainer>
         </Styled.AnimationContainer>
-        <Styled.ProgressBarContainer>
-          {progressBarStats.map((stat) => (
-            <ProgressBar
-              title={stat.title}
-              color={stat.color}
-              total={stat.total}
-              key={stat.title}
-              progressBarValue={stat.progressBarValue}
-            />
-          ))}
-        </Styled.ProgressBarContainer>
-        <Styled.LifeStatsContainer>
-          <Styled.ChartsTitle>
-            {t("whaleAnimation.chartsTitle", { lifeTime, name })}
-          </Styled.ChartsTitle>
-          <Styled.LifeChartContainer>
-            {lifeStats.map((stat) => (
-              <Styled.LifeChart key={stat} />
+        {name === "Brigite" ? (
+          <Styled.ProgressBarContainer>
+            {progressBarStats.map((stat) => (
+              <ProgressBar
+                title={stat.title}
+                color={stat.color}
+                total={stat.total}
+                key={stat.title}
+                progressBarValue={stat.progressBarValue}
+                videoDuration={stat.videoDuration}
+              />
             ))}
-          </Styled.LifeChartContainer>
-        </Styled.LifeStatsContainer>
-        <Styled.ToHelpButton activeOpacity={0.7}>
-          <Styled.ToHelpButtonText>
-            {t("solution.lastCard")}
-          </Styled.ToHelpButtonText>
-        </Styled.ToHelpButton>
+          </Styled.ProgressBarContainer>
+        ) : name === "Dory" ? (
+          <HorizontalList oceanCycle={oceanCycle} />
+        ) : (
+          <Styled.LifeStatsContainer>
+            <Styled.ChartsTitle>
+              {t("whaleAnimation.chartsTitle", { lifeTime, name })}
+            </Styled.ChartsTitle>
+            <Styled.LifeChartContainer>
+              {lifeStats.map((stat) => (
+                <Styled.LifeChart key={stat} />
+              ))}
+            </Styled.LifeChartContainer>
+          </Styled.LifeStatsContainer>
+        )}
+        <Styled.ToHelpButtonContainer>
+          <Styled.ToHelpButton activeOpacity={0.7}>
+            <Styled.ToHelpButtonText>
+              {t("solution.lastCard")}
+            </Styled.ToHelpButtonText>
+          </Styled.ToHelpButton>
+        </Styled.ToHelpButtonContainer>
       </Styled.Background>
     </Styled.Container>
   );

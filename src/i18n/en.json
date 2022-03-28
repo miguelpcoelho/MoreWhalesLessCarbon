@@ -23,7 +23,23 @@
     "progressBar2Title": "CO2 absorbed by 50 trees",
     "progressBar3Title": "CO2 produced by a person",
     "chartsTitle": "At the end of his {{lifeTime}} years of life, {{name}}",
-    "months": "Months"
+    "months": "Months",
+    "month": "Month",
+    "oceanCycle": {
+      "scrollInfo": "Scroll to next slide",
+      "title": {
+        "1": "Whale Pump",
+        "2": "Great Whale Conveyor Belt",
+        "3": "Biomass Carbon",
+        "4": "Deadfall Carbon"
+      },
+      "text": {
+        "1": "All whales dive underwater to feed and return to the surface to breathe. At the surface, they release buoyant fecal plumes that are rich in nutrients that phytoplankton need to grow.",
+        "2": "Many whales migrate from nutrient-rich feeding grounds to nutrient-poor breeding grounds. On the breeding grounds, whales release nitrogen-rich urea that can stimulate phytoplankton growth",
+        "3": "All living things are made of carbon and thus serve as carbon reservoirs throughout their lifespans. The larger and more long-lived the animal, the more carbon is stored.",
+        "4": "When large marine vertebrates die, their carcasses sink to the seafloor. There, the carbon inside their carcass can support deep-sea ecosystems and be incorporated into marine sediments."
+      }
+    }
   },
   "blueWhale": "Blue Whale",
   "pilotWhale": "Pilot Whale",

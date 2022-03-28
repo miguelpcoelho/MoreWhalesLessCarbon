@@ -23,7 +23,23 @@
     "progressBar2Title": "CO2 absorvido por 50 árvores",
     "progressBar3Title": "CO2 produzido por uma pessoa",
     "chartsTitle": "No final dos seus {{lifeTime}} anos de vida, a {{name}}...",
-    "months": "Meses"
+    "months": "Meses",
+    "month": "Mês",
+    "oceanCycle": {
+      "scrollInfo": "Scroll para o próximo slide",
+      "title": {
+        "1": "Pump da Baleia",
+        "2": "Corrente Transportadora",
+        "3": "Carbono de Biomassa",
+        "4": "Carbono e o Falecimento"
+      },
+      "text": {
+        "1": "Todas as baleias mergulham debaixo de água para se alimentar e retornam à superfície para respirar. Na superfície, elas liberam dejetos flutuantes que são ricos em nutrientes, necessários para o crescimento de fitoplâncton - responsável pela produção de cerca de 80% do oxigênio da atmosfera",
+        "2": "Muitas baleias migram de locais de alimentação ricos em nutrientes para locais de reprodução pobres em nutrientes. Nos locais de reprodução, as baleias libertam ureia rica em nitrogénio que pode estimular o crescimento do fitoplâncton",
+        "3": "Todos os seres vivos são feitos de carbono, portanto servem como reservatórios ao longo de sua vida. Quanto maior e mais velho o animal, mais carbono é armazenado.",
+        "4": "Quando grandes vertebrados marinhos morrem as carcaças afundam no fundo do mar. Lá o carbono dentro de suas carcaças pode sustentar os ecossistemas e ser incorporado aos sedimentos marinhos."
+      }
+    }
   },
   "blueWhale": "Baleia azul",
   "pilotWhale": "Baleia piloto",

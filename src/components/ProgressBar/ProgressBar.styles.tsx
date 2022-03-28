@@ -4,15 +4,15 @@ import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
 
 export const Container = styled(View)`
-  width: 100%;
-  flex-direction: row;
-  margin-top: 20px;
+  width: 80%;
+  margin-top: 50px;
   align-items: center;
 `;
 
 export const NameContainer = styled(View)`
-  width: 100px;
-  margin-right: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 `;
 
 export const Name = styled(Text)`
@@ -33,6 +33,7 @@ export const ProgressBar = styled(Animated.View)`
 `;
 
 export const ProgressBarContainer = styled(View)`
+  width: 100%;
   border-radius: 4px;
   padding: 1px;
   height: 18px;
