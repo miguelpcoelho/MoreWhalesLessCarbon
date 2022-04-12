@@ -57,8 +57,8 @@ const WhaleAnimation = () => {
     {
       title: t("whaleAnimation.progressBar2Title"),
       color: colors.green,
-      progressBarValue: windowWidth / 37.8,
-      total: 1,
+      progressBarValue: windowWidth / 1.89,
+      total: 22,
       videoDuration,
     },
     {
@@ -93,7 +93,11 @@ const WhaleAnimation = () => {
     },
   ];
 
-  const lifeStats: string[] = ["1", "2", "3", "4"];
+  const lifeStats: string[] = [
+    t("whaleAnimation.chartText.1"),
+    t("whaleAnimation.chartText.2"),
+    t("whaleAnimation.chartText.3"),
+  ];
 
   return (
     <Styled.Container>
@@ -156,9 +160,14 @@ const WhaleAnimation = () => {
             <Styled.ChartsTitle>
               {t("whaleAnimation.chartsTitle", { lifeTime, name })}
             </Styled.ChartsTitle>
-            <Styled.LifeChartContainer>
+            <Styled.LifeChartContainer
+              horizontal
+              showsHorizontalScrollIndicator
+            >
               {lifeStats.map((stat) => (
-                <Styled.LifeChart key={stat} />
+                <Styled.LifeChart key={stat}>
+                  <Styled.LifeChartText>{stat}</Styled.LifeChartText>
+                </Styled.LifeChart>
               ))}
             </Styled.LifeChartContainer>
           </Styled.LifeStatsContainer>

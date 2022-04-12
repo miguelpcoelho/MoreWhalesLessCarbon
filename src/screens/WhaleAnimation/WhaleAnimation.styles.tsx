@@ -5,6 +5,7 @@ import {
   View,
   Image,
   Animated,
+  ScrollView,
 } from "react-native";
 import styled from "styled-components";
 import colors from "../../styles/colors";
@@ -76,9 +77,8 @@ export const OceanCycleContainer = styled(View)`
   border: 1px solid red;
 `;
 
-export const LifeChartContainer = styled(View)`
+export const LifeChartContainer = styled(ScrollView)`
   margin-top: 10px;
-  flex-direction: row;
 `;
 
 export const LifeStatsContainer = styled(View)`
@@ -88,18 +88,33 @@ export const LifeStatsContainer = styled(View)`
 `;
 
 export const ChartsTitle = styled(Text)`
-  font-family: ${fonts.title};
+  font-family: ${fonts.text};
   color: ${colors.main};
   font-size: 13px;
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 10px;
 `;
 
 export const LifeChart = styled(View)`
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  border: 2px solid ${colors.main};
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
   background-color: ${colors.white};
   margin-left: 10px;
   margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const LifeChartText = styled(Text)`
+  font-family: ${fonts.text};
+  color: ${colors.main};
+  font-size: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 `;
 
 export const ToHelpButtonContainer = styled(View)`

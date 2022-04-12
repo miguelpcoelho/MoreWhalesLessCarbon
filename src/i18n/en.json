@@ -20,9 +20,14 @@
   },
   "whaleAnimation": {
     "progressBar1Title": "CO2 absorbed by {{name}}",
-    "progressBar2Title": "CO2 absorbed by 50 trees",
+    "progressBar2Title": "CO2 absorbed by 1000 trees",
     "progressBar3Title": "CO2 produced by a person",
-    "chartsTitle": "At the end of his {{lifeTime}} years of life, {{name}}",
+    "chartsTitle": "Every whale has economic value.\n\nWe estimate the value of an average great whale by determining today’s value of the carbon sequestered based on the market price of carbon dioxide and analyzing other economic contributions, such as fishery enhancement and ecotourism.\n\nOver its {{lifeTime}} years of life, {{name}} will economically be worth US$2 million.",
+    "chartText": {
+      "1": "Whales contribute to the food web chain and increase fish stocks",
+      "2": "Whale watching industry estimated at over $2 billion globally",
+      "3": "Phytoplankton captures 37 billion tons of CO2 per year"
+    },
     "months": "Months",
     "month": "Month",
     "oceanCycle": {

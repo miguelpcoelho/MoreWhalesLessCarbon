@@ -20,9 +20,14 @@
   },
   "whaleAnimation": {
     "progressBar1Title": "CO2 absorvido pela {{name}}",
-    "progressBar2Title": "CO2 absorvido por 50 árvores",
+    "progressBar2Title": "CO2 absorvido por 1000 árvores",
     "progressBar3Title": "CO2 produzido por uma pessoa",
-    "chartsTitle": "No final dos seus {{lifeTime}} anos de vida, a {{name}}...",
+    "chartsTitle": "Cada baleia tem valor económico.\n\nA estimativa do valor é baseada no preço do dióxido de carbono no mercado, impacto na pesca e o ecoturismo.\n\nAo longo dos seus {{lifeTime}} anos de vida, a {{name}} economicamente terá o valor de 2 milhões US$.",
+    "chartText": {
+      "1": "As baleias contribuem para a cadeia alimentar e aumentam os stocks de peixes",
+      "2": "Indústria de observação de baleias estimada em mais de 2 bilhões US$ globalmente",
+      "3": "Fitoplâncton captura 37 bilhões de toneladas de CO2 por ano"
+    },
     "months": "Meses",
     "month": "Mês",
     "oceanCycle": {
