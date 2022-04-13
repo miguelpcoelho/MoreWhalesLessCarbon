@@ -2,8 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Cover from "./screens/Cover/Cover";
-import Problem from "./screens/Problem/Problem";
-import Solution from "./screens/Solution/Solution";
+import WhaleMenu from "./screens/WhaleMenu/WhaleMenu";
 import WhaleAnimation from "./screens/WhaleAnimation/WhaleAnimation";
 import "../src/i18n/index";
 
@@ -17,8 +16,7 @@ const Routes = () => {
         initialRouteName="Cover"
       >
         <Screen name="Cover" component={Cover} />
-        <Screen name="Problem" component={Problem} />
-        <Screen name="Solution" component={Solution} />
+        <Screen name="WhaleMenu" component={WhaleMenu} />
         <Screen name="WhaleAnimation" component={WhaleAnimation} />
       </Navigator>
     </NavigationContainer>

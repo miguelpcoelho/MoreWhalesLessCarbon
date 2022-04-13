@@ -7,10 +7,8 @@ export interface ContentBlockProps {
   image?: ImageSourcePropType;
 }
 
-export interface WhaleProps {
+export interface ActionProps {
   name: string;
-  image: ImageSourcePropType;
-  species: string;
   lifeTime: number;
   video: AVPlaybackSource;
   videoDuration: number;

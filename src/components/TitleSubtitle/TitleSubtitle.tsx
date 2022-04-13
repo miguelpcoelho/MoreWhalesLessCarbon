@@ -1,15 +1,14 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View } from "react-native";
-import Header from "../Header/Header";
-import * as Styled from "./TopContent.styles";
+import * as Styled from "./TitleSubtitle.styles";
 
-interface TopContentProps {
+interface TitleSubtitleProps {
   title: string;
   subtitle?: string;
 }
 
-const TopContent = ({ title, subtitle }: TopContentProps) => {
+const TitleSubtitle = ({ title, subtitle }: TitleSubtitleProps) => {
   return (
     <View>
       <Styled.Title>{title}</Styled.Title>
@@ -18,4 +17,4 @@ const TopContent = ({ title, subtitle }: TopContentProps) => {
   );
 };
 
-export default TopContent;
+export default TitleSubtitle;

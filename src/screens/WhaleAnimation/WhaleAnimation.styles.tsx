@@ -152,5 +152,5 @@ export const ImageContainer = styled(View)`
 
 export const WhaleImage = styled(Image)`
   width: 70px;
-  height: 50px;
+  height: 30px;
 `;

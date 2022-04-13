@@ -3,18 +3,13 @@ import { Video } from "expo-av";
 import { t } from "i18next";
 import AnimatedLottieView from "lottie-react-native";
 import React, { useEffect, useRef, useState } from "react";
-import { Dimensions, SafeAreaView, ScrollView } from "react-native";
+import { Dimensions } from "react-native";
 import solutionBackground from "../../../assets/images/solution_background.png";
-import globe from "../../../assets/lottie/globe-world-animation.json";
+import whale from "../../../assets/images/whale.png";
 import Header from "../../components/Header/Header";
-import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
-import TopContent from "../../components/TopContent/TopContent";
-import {
-  OceanCycleProps,
-  ProgressBarProps,
-  WhaleProps,
-} from "../../interfaces";
+import TitleSubtitle from "../../components/TitleSubtitle/TitleSubtitle";
+import { ActionProps, ProgressBarProps } from "../../interfaces";
 import colors from "../../styles/colors";
 import * as Styled from "./WhaleAnimation.styles";
 
@@ -31,8 +26,8 @@ const WhaleAnimation = () => {
     animationRef?.current?.play(0, 140);
   }, []);
 
-  const { name, species, lifeTime, image, video, videoDuration, pathTime } =
-    route.params as WhaleProps;
+  const { name, lifeTime, video, videoDuration, pathTime } =
+    route.params as ActionProps;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -48,7 +43,7 @@ const WhaleAnimation = () => {
 
   const progressBarStats: ProgressBarProps[] = [
     {
-      title: t("whaleAnimation.progressBar1Title", { name }),
+      title: t("whaleAnimation.progressBar1Title", { name: "Dory" }),
       color: colors.blue,
       progressBarValue: windowWidth / 1.26,
       total: 33,
@@ -70,40 +65,11 @@ const WhaleAnimation = () => {
     },
   ];
 
-  const oceanCycle: OceanCycleProps[] = [
-    {
-      title: t("whaleAnimation.oceanCycle.title.1"),
-      text: t("whaleAnimation.oceanCycle.text.1"),
-      slideNumber: 1,
-    },
-    {
-      title: t("whaleAnimation.oceanCycle.title.2"),
-      text: t("whaleAnimation.oceanCycle.text.2"),
-      slideNumber: 2,
-    },
-    {
-      title: t("whaleAnimation.oceanCycle.title.3"),
-      text: t("whaleAnimation.oceanCycle.text.3"),
-      slideNumber: 3,
-    },
-    {
-      title: t("whaleAnimation.oceanCycle.title.4"),
-      text: t("whaleAnimation.oceanCycle.text.4"),
-      slideNumber: 4,
-    },
-  ];
-
-  const lifeStats: string[] = [
-    t("whaleAnimation.chartText.1"),
-    t("whaleAnimation.chartText.2"),
-    t("whaleAnimation.chartText.3"),
-  ];
-
   return (
     <Styled.Container>
       <Styled.Background source={solutionBackground} resizeMode="stretch">
         <Header />
-        <TopContent title={name} subtitle={species} />
+        <TitleSubtitle title="Dory" subtitle={name} />
         <Styled.AnimationContainer>
           <Video
             shouldPlay
@@ -117,7 +83,7 @@ const WhaleAnimation = () => {
           />
           <Styled.GlobeContainer>
             <Styled.ImageContainer>
-              <Styled.WhaleImage source={image} />
+              <Styled.WhaleImage source={whale} />
             </Styled.ImageContainer>
             <Styled.MonthsContainer>
               <Styled.Months>{months}</Styled.Months>
@@ -131,54 +97,20 @@ const WhaleAnimation = () => {
                 </Styled.MonthsText>
               )}
             </Styled.MonthsContainer>
-            <AnimatedLottieView
-              ref={animationRef}
-              source={globe}
-              autoPlay={false}
-              loop={false}
-              style={{ width: 100, height: 100 }}
-            />
           </Styled.GlobeContainer>
         </Styled.AnimationContainer>
-        {name === "Brigite" ? (
-          <Styled.ProgressBarContainer>
-            {progressBarStats.map((stat) => (
-              <ProgressBar
-                title={stat.title}
-                color={stat.color}
-                total={stat.total}
-                key={stat.title}
-                progressBarValue={stat.progressBarValue}
-                videoDuration={stat.videoDuration}
-              />
-            ))}
-          </Styled.ProgressBarContainer>
-        ) : name === "Dory" ? (
-          <HorizontalList oceanCycle={oceanCycle} />
-        ) : (
-          <Styled.LifeStatsContainer>
-            <Styled.ChartsTitle>
-              {t("whaleAnimation.chartsTitle", { lifeTime, name })}
-            </Styled.ChartsTitle>
-            <Styled.LifeChartContainer
-              horizontal
-              showsHorizontalScrollIndicator
-            >
-              {lifeStats.map((stat) => (
-                <Styled.LifeChart key={stat}>
-                  <Styled.LifeChartText>{stat}</Styled.LifeChartText>
-                </Styled.LifeChart>
-              ))}
-            </Styled.LifeChartContainer>
-          </Styled.LifeStatsContainer>
-        )}
-        <Styled.ToHelpButtonContainer>
-          <Styled.ToHelpButton activeOpacity={0.7}>
-            <Styled.ToHelpButtonText>
-              {t("solution.lastCard")}
-            </Styled.ToHelpButtonText>
-          </Styled.ToHelpButton>
-        </Styled.ToHelpButtonContainer>
+        <Styled.ProgressBarContainer>
+          {progressBarStats.map((stat) => (
+            <ProgressBar
+              title={stat.title}
+              color={stat.color}
+              total={stat.total}
+              key={stat.title}
+              progressBarValue={stat.progressBarValue}
+              videoDuration={stat.videoDuration}
+            />
+          ))}
+        </Styled.ProgressBarContainer>
       </Styled.Background>
     </Styled.Container>
   );

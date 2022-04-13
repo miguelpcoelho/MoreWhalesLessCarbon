@@ -16,44 +16,33 @@ export const Container = styled(View)`
 `;
 
 export const Background = styled(ImageBackground)`
-  padding-top: 80px;
+  padding-top: 20%;
+  padding-left: 3%;
+  padding-right: 3%;
   align-items: center;
   width: 100%;
   flex: 1;
 `;
 
-export const HeaderTitle = styled(Text)`
+export const Title = styled(Text)`
   font-size: 50px;
-  font-weight: bold;
   letter-spacing: -1px;
   text-align: center;
   color: ${colors.main};
   font-family: ${fonts.title};
 `;
 
-export const FooterTitle = styled(Text)`
-  margin-top: 35px;
-  font-size: 50px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  text-align: center;
-  color: ${colors.white};
-  font-family: ${fonts.title};
-`;
-
-export const Subtitle = styled(Text)`
-  font-size: 15px;
-  text-align: center;
-  color: ${colors.main};
-  font-family: ${fonts.text};
+export const WhaleContainer = styled(View)`
+  align-items: flex-end;
+  width: 100%;
+  margin-right: -10%;
 `;
 
 export const OptionContainer = styled(TouchableOpacity)`
   border: ${colors.main} 3px solid;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
   margin-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
   align-items: center;
   justify-content: center;
   background-color: ${colors.white};
@@ -66,24 +55,19 @@ export const OptionTitle = styled(Text)`
   font-family: ${fonts.text};
 `;
 
-export const OptionContent = styled(Text)`
-  font-size: 20px;
-  text-align: center;
-`;
-
 export const LanguageSelectorContainer = styled(View)`
   flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
+  align-items: flex-end;
   align-self: flex-start;
-  margin-left: 20px;
+  padding-bottom: 25%;
+  flex: 1;
 `;
 
 export const FlagContainer = styled(TouchableOpacity)`
-  width: 55px;
-  height: 35px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 10%;
+  height: 7%;
+  margin-left: 5%;
+  margin-right: 8%;
 `;
 
 export const Flag = styled(Image)`

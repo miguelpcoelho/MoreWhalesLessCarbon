@@ -4,18 +4,16 @@ import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
 
 export const Title = styled(Text)`
-  font-family: ${fonts.text};
+  font-family: ${fonts.title};
   color: ${colors.main};
-  font-size: 50px;
-  font-weight: bold;
+  font-size: 46px;
   letter-spacing: -1px;
   text-align: center;
 `;
 
 export const Subtitle = styled(Text)`
-  font-family: ${fonts.text};
+  font-family: ${fonts.title};
   color: ${colors.main};
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 20px;
   text-align: center;
 `;

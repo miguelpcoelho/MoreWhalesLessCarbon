@@ -1,22 +1,16 @@
 {
   "cover": {
-    "headerTitle": "Ocean,",
-    "subtitle": "Press on the circles to find out!",
-    "firstButton": "Problem",
-    "secondButton": "Solution",
-    "footerTitle": "why is important?"
+    "title": "Whales and Global Warming",
+    "button": "Come Find Out"
   },
-  "problem": {
-    "title": "The Problem",
-    "subtitle": "Carbon Dioxide (CO2) in the atmosphere",
-    "button": "solution"
-  },
-  "solution": {
-    "title": "A solution",
-    "subtitle": "The Oceans!\nCarbon sequestration machines",
-    "firstCard": "Ocean Carbon Cycle",
-    "lastCard": "What can I do to help?",
-    "cicleTitle": "Cycle in operation"
+  "whaleMenu": {
+    "title": "Whales",
+    "subtitle": "Carbon sequestration machines!",
+    "firstCard": "Magration",
+    "secondCard": "Whale Pump",
+    "lastCard": "Deadfall Carbon",
+    "asWhale": "As",
+    "seeInAction": "See in action"
   },
   "whaleAnimation": {
     "progressBar1Title": "CO2 absorbed by {{name}}",
