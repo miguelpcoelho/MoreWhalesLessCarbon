@@ -9,10 +9,11 @@ export interface ContentBlockProps {
 
 export interface ActionProps {
   name: string;
-  lifeTime: number;
   video: AVPlaybackSource;
-  videoDuration: number;
-  pathTime: number;
+  videoDuration?: number;
+  pathTime?: number;
+  progressBarStats?: ProgressBarProps[];
+  infoCardText?: string;
 }
 
 export interface ProgressBarProps {
@@ -20,7 +21,10 @@ export interface ProgressBarProps {
   color: ColorValue;
   progressBarValue: number;
   total: number;
-  videoDuration: number;
+  videoDuration?: number;
+  personStats?: boolean;
+  deadStats?: boolean;
+  boldText?: string;
 }
 
 export interface OceanCycleProps {

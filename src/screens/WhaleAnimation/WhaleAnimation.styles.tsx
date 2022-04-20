@@ -108,36 +108,6 @@ export const LifeChart = styled(View)`
   justify-content: center;
 `;
 
-export const LifeChartText = styled(Text)`
-  font-family: ${fonts.text};
-  color: ${colors.main};
-  font-size: 13px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: center;
-`;
-
-export const ToHelpButtonContainer = styled(View)`
-  flex: 1;
-  justify-content: flex-end;
-`;
-
-export const ToHelpButton = styled(TouchableOpacity)`
-  width: 210px;
-  height: 50px;
-  border: 2px solid ${colors.main};
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-`;
-
-export const ToHelpButtonText = styled(Text)`
-  font-size: 12px;
-  font-family: ${fonts.title};
-  color: ${colors.main};
-`;
-
 export const ImageContainer = styled(View)`
   width: 80px;
   height: 80px;

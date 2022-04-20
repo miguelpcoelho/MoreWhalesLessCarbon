@@ -12,14 +12,22 @@ export const Container = styled(View)`
 export const NameContainer = styled(View)`
   width: 100%;
   justify-content: flex-start;
+  align-items: center;
   margin-bottom: 10px;
+  flex-direction: row;
 `;
 
 export const Name = styled(Text)`
   font-size: 13px;
-  font-weight: bold;
   font-family: ${fonts.text};
   color: ${colors.main};
+`;
+
+export const BoldName = styled(Text)`
+  font-size: 15px;
+  font-family: ${fonts.title};
+  color: ${colors.main};
+  padding-left: 4px;
 `;
 
 export const ProgressBar = styled(Animated.View)`

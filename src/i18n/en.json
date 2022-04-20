@@ -14,33 +14,13 @@
   },
   "whaleAnimation": {
     "progressBar1Title": "CO2 absorbed by {{name}}",
-    "progressBar2Title": "CO2 absorbed by 1000 trees",
+    "progressBar1BoldTitle": "throughout her life",
+    "progressBar2Title": "CO2 absorbed by 25 trees",
     "progressBar3Title": "CO2 produced by a person",
-    "chartsTitle": "Every whale has economic value.\n\nWe estimate the value of an average great whale by determining today’s value of the carbon sequestered based on the market price of carbon dioxide and analyzing other economic contributions, such as fishery enhancement and ecotourism.\n\nOver its {{lifeTime}} years of life, {{name}} will economically be worth US$2 million.",
-    "chartText": {
-      "1": "Whales contribute to the food web chain and increase fish stocks",
-      "2": "Whale watching industry estimated at over $2 billion globally",
-      "3": "Phytoplankton captures 37 billion tons of CO2 per year"
-    },
+    "progressBar3BoldTitle": "during a month",
     "months": "Months",
     "month": "Month",
-    "oceanCycle": {
-      "scrollInfo": "Scroll to next slide",
-      "title": {
-        "1": "Whale Pump",
-        "2": "Great Whale Conveyor Belt",
-        "3": "Biomass Carbon",
-        "4": "Deadfall Carbon"
-      },
-      "text": {
-        "1": "All whales dive underwater to feed and return to the surface to breathe. At the surface, they release buoyant fecal plumes that are rich in nutrients that phytoplankton need to grow.",
-        "2": "Many whales migrate from nutrient-rich feeding grounds to nutrient-poor breeding grounds. On the breeding grounds, whales release nitrogen-rich urea that can stimulate phytoplankton growth",
-        "3": "All living things are made of carbon and thus serve as carbon reservoirs throughout their lifespans. The larger and more long-lived the animal, the more carbon is stored.",
-        "4": "When large marine vertebrates die, their carcasses sink to the seafloor. There, the carbon inside their carcass can support deep-sea ecosystems and be incorporated into marine sediments."
-      }
-    }
-  },
-  "blueWhale": "Blue Whale",
-  "pilotWhale": "Pilot Whale",
-  "humpbackWhale": "Humpback Whale"
+    "pumpInfoCard": "All whales dive underwater to feed and return to the surface to breathe. At the surface, they release buoyant fecal plumes that are rich in nutrients that phytoplankton - contribute at least 50 percent of all oxygen to atmosphere, and capture about 37 billion metric tons of CO2 - need to grow",
+    "deadInfoCard": "When large marine vertebrates die, their carcasses sink to the seafloor. There, the carbon inside their carcass can suport deep-sea ecosystems and be incorporated into marine sediments"
+  }
 }
