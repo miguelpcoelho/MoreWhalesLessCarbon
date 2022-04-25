@@ -6,8 +6,9 @@ import arrow1 from "../../../assets/images/arrow1.png";
 import arrow2 from "../../../assets/images/arrow2.png";
 import solutionBackground from "../../../assets/images/solution_background.png";
 import whale from "../../../assets/images/whale.png";
-import animation1 from "../../../assets/video/animation_Slomo.mp4";
-import animation2 from "../../../assets/video/humpback_whale.mp4";
+import animation1 from "../../../assets/video/humpback_whale.mp4";
+import animation2 from "../../../assets/video/pump.mp4";
+import animation3 from "../../../assets/video/deadfall.mp4";
 import Header from "../../components/Header/Header";
 import TitleSubtitle from "../../components/TitleSubtitle/TitleSubtitle";
 import { ActionProps, ProgressBarProps } from "../../interfaces";
@@ -57,20 +58,20 @@ const WhaleMenu = () => {
   const whaleMenuProps: ActionProps[] = [
     {
       name: t("whaleMenu.firstCard"),
-      video: animation2,
+      video: animation1,
       videoDuration: 44000,
       pathTime: 6,
       progressBarStats: migrationProgressBarStats,
     },
     {
       name: t("whaleMenu.secondCard"),
-      video: animation1,
+      video: animation2,
       infoCardText: t("whaleAnimation.pumpInfoCard"),
     },
     {
       name: t("whaleMenu.lastCard"),
-      video: animation1,
-      videoDuration: 10000,
+      video: animation3,
+      videoDuration: 20000,
       progressBarStats: deadProgressBarStats,
       infoCardText: t("whaleAnimation.deadInfoCard"),
     },
