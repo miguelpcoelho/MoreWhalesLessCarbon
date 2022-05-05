@@ -21,6 +21,7 @@ export const Background = styled(ImageBackground)`
   align-items: center;
   width: 100%;
   flex: 1;
+  padding-bottom: 20%;
 `;
 
 export const AnimationContainer = styled(View)`
@@ -41,6 +42,8 @@ export const GlobeContainer = styled(View)`
 export const ProgressBarContainer = styled(View)`
   width: 100%;
   align-items: center;
+  flex: 1;
+  justify-content: space-between;
 `;
 
 export const MonthsContainer = styled(View)`

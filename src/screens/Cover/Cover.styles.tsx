@@ -40,7 +40,7 @@ export const WhaleContainer = styled(View)`
 
 export const OptionContainer = styled(TouchableOpacity)`
   border: ${colors.main} 3px solid;
-  margin-top: 50px;
+  margin-top: 6%;
   padding-left: 10%;
   padding-right: 10%;
   align-items: center;

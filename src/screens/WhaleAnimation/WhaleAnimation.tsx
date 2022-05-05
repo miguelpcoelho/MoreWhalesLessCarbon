@@ -13,6 +13,7 @@ import { ActionProps } from "../../interfaces";
 import * as Styled from "./WhaleAnimation.styles";
 
 const width = Dimensions.get("window").width;
+const height = Dimensions.get("window").height;
 
 const WhaleAnimation = () => {
   const route = useRoute();
@@ -55,7 +56,7 @@ const WhaleAnimation = () => {
             useNativeControls
             style={{
               width: width - 40,
-              height: 230,
+              height: height * 0.28,
             }}
           />
           <Styled.GlobeContainer>

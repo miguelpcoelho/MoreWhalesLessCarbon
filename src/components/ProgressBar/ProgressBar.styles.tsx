@@ -5,8 +5,8 @@ import fonts from "../../styles/fonts";
 
 export const Container = styled(View)`
   width: 80%;
-  margin-top: 50px;
   align-items: center;
+  flex: 1;
 `;
 
 export const NameContainer = styled(View)`
@@ -44,7 +44,7 @@ export const ProgressBarContainer = styled(View)`
   width: 100%;
   border-radius: 4px;
   padding: 1px;
-  height: 18px;
+  height: 24%;
   background-color: ${colors.main};
 `;
 

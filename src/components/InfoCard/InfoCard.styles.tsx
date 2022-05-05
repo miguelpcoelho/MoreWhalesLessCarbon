@@ -9,8 +9,7 @@ export const Container = styled(View)`
   justify-content: flex-end;
   width: 100%;
   position: relative;
-  flex: 1;
-  margin-top: -150px;
+  flex: 2;
 `;
 
 export const TextContainer = styled(View)`

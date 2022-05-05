@@ -131,7 +131,7 @@ const WhaleMenu = () => {
           {whaleMenuProps.map((item) => (
             <Styled.WhaleActionContainer
               activeOpacity={0.7}
-              style={{ width: width - 120 }}
+              style={{ width: width - 120, height: height * 0.11 }}
               key={item.name}
               onPress={() =>
                 navigation.navigate("WhaleAnimation", {
